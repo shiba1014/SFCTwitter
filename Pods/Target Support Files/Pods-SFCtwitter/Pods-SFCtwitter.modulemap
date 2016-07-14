@@ -1,0 +1,6 @@
+framework module Pods_SFCtwitter {
+  umbrella header "Pods-SFCtwitter-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Fabric.with([Twitter.self]);
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        UINavigationBar.appearance().barTintColor = UIColor ( red: 0.102, green: 0.6588, blue: 0.6196, alpha: 1.0 )
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName : UIColor ( red: 0.102, green: 0.6588, blue: 0.6196, alpha: 1.0 )], forState: .Selected)
+        UITabBar.appearance().tintColor = UIColor ( red: 0.102, green: 0.6588, blue: 0.6196, alpha: 1.0 )
         return true
     }
 
